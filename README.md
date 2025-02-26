@@ -1,16 +1,42 @@
-# Hotel-Management-OOP-Project
+# Hotel Management System
 
-This is a Hotel Management tool which can be used to manage
-activites like storing customer details, booking rooms of four different types, ordering food
-for particular rooms, unbooking rooms and showing the bill. It can also be used to see
-different room features and room availibility. It is a menu driven program and it runs until
-the user exits. File handling has been used to store the current status of the
-hotel(customer details, booked rooms, food ordered) in a file once the program exits so
-that when we restart the program, the old details are not lost. The program reads the file
-when it restarts to know the previous status of the hotel. Writing of file has been done in a
-separate thread as it can be done parallely. User defined exception is thrown if the user
-tries to book an already allotted room. Exception handling is properly done to deal with any
-kind of unexpected exception.
-##### Topics Covered-  
-Classes and Objects, Inheritance, File Handling with Objects, ArrayList, implementing
-Interface, User defined exception and Exception handling.
+## 📌 Overview
+This project is a **Hotel Management System** written in **Java**. It allows users to **book rooms, order food, checkout, and view room details**.  
+
+The original code was obtained from the following GitHub repository:  
+**[GitHub Repository Link](https://github.com/shouryaj98/Hotel-Management-Project-Java/blob/master/Main.java)**  
+
+After obtaining the code, **SOLID principles** were applied to improve structure, readability, and maintainability.
+
+## ✅ **Applied SOLID Principles**
+1. **Single Responsibility Principle (SRP)**  
+   - Separated concerns into different classes:
+     - `Room` → Handles room details  
+     - `Customer` → Manages customer information  
+     - `BookingManager` → Manages room bookings  
+     - `FoodOrder` → Handles food ordering  
+     - `Billing` → Processes bills  
+     - `HotelManagementSystem` → Manages user interaction  
+
+2. **Open/Closed Principle (OCP)**  
+   - Code is **open for extension but closed for modification**  
+   - Example: New room types or pricing structures can be added without modifying existing code  
+
+3. **Liskov Substitution Principle (LSP)**  
+   - Currently, there's no subclassing, but if extended (e.g., `LuxuryRoom extends Room`), the derived class will work without breaking functionality  
+
+4. **Interface Segregation Principle (ISP)**  
+   - Not many interfaces needed in this small project, but if expanded, **separate interfaces** can be created (e.g., `IBooking`, `IFoodOrder`)  
+
+5. **Dependency Inversion Principle (DIP)**  
+   - High-level modules (e.g., `HotelManagementSystem`) do not depend on low-level modules but rely on abstractions  
+
+---
+
+## ⚡ Features
+- **Book a Room** 🏨  
+- **Order Food** 🍔  
+- **Checkout & Generate Bill** 🧾  
+- **Display All Room Details** 🏠  
+- **Display Available Rooms** ✅  
+
