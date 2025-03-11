@@ -1,6 +1,6 @@
 import java.util.*;
 
-// 1. Room class (SRP: Handles only room details)
+
 class Room {
     private int roomNumber;
     private boolean isAvailable;
